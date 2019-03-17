@@ -1,0 +1,310 @@
+EESchema Schematic File Version 4
+LIBS:Action_Card-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5C798AB0
+P 4175 3350
+F 0 "J?" H 4250 3300 50  0000 L CNN
+F 1 "Conn_01x03" H 4250 3425 50  0000 L CNN
+F 2 "" H 4175 3350 50  0001 C CNN
+F 3 "~" H 4175 3350 50  0001 C CNN
+	1    4175 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5C798BD1
+P 2900 3350
+F 0 "J?" H 3025 3325 50  0000 C CNN
+F 1 "Conn_01x03" H 3225 3425 50  0000 C CNN
+F 2 "" H 2900 3350 50  0001 C CNN
+F 3 "~" H 2900 3350 50  0001 C CNN
+	1    2900 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C798D76
+P 3100 3450
+F 0 "#PWR?" H 3100 3200 50  0001 C CNN
+F 1 "GND" H 3105 3277 50  0000 C CNN
+F 2 "" H 3100 3450 50  0001 C CNN
+F 3 "" H 3100 3450 50  0001 C CNN
+	1    3100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C798D8C
+P 3975 3450
+F 0 "#PWR?" H 3975 3200 50  0001 C CNN
+F 1 "GND" H 3980 3277 50  0000 C CNN
+F 2 "" H 3975 3450 50  0001 C CNN
+F 3 "" H 3975 3450 50  0001 C CNN
+	1    3975 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 3350 3875 3350
+Text Label 3375 3250 0    50   ~ 0
+SDA(5V)
+Text Label 3375 3350 0    50   ~ 0
+SCL(5V)
+$Comp
+L power:+5V #PWR?
+U 1 1 5C799057
+P 3275 2375
+F 0 "#PWR?" H 3275 2225 50  0001 C CNN
+F 1 "+5V" H 3290 2548 50  0000 C CNN
+F 2 "" H 3275 2375 50  0001 C CNN
+F 3 "" H 3275 2375 50  0001 C CNN
+	1    3275 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C799095
+P 3875 2375
+F 0 "#PWR?" H 3875 2225 50  0001 C CNN
+F 1 "+5V" H 3890 2548 50  0000 C CNN
+F 2 "" H 3875 2375 50  0001 C CNN
+F 3 "" H 3875 2375 50  0001 C CNN
+	1    3875 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Rp1
+U 1 1 5C7990D2
+P 3275 2525
+F 0 "Rp1" H 3075 2575 50  0000 L CNN
+F 1 "10k" V 3275 2450 50  0000 L CNN
+F 2 "" V 3205 2525 50  0001 C CNN
+F 3 "~" H 3275 2525 50  0001 C CNN
+	1    3275 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Rp2
+U 1 1 5C7991B7
+P 3875 2525
+F 0 "Rp2" H 3675 2575 50  0000 L CNN
+F 1 "10k" V 3875 2450 50  0000 L CNN
+F 2 "" V 3805 2525 50  0001 C CNN
+F 3 "~" H 3875 2525 50  0001 C CNN
+	1    3875 2525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3250 3275 3250
+Connection ~ 3875 3350
+Wire Wire Line
+	3875 3350 3100 3350
+Connection ~ 3275 3250
+Wire Wire Line
+	3275 3250 3975 3250
+Wire Wire Line
+	3875 2675 3875 2900
+Wire Wire Line
+	3275 2675 3275 2900
+$Comp
+L stm32f042k6tx:txb0108 U1
+U 1 1 5C799526
+P 3025 2900
+F 0 "U1" H 3025 3125 50  0000 C CNN
+F 1 "txb0108" H 3025 3034 50  0000 C CNN
+F 2 "" H 2675 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 2675 2850 50  0001 C CNN
+	1    3025 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U1
+U 2 1 5C79958D
+P 4125 2900
+F 0 "U1" H 4125 2685 50  0000 C CNN
+F 1 "txb0108" H 4125 2776 50  0000 C CNN
+F 2 "" H 3775 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 3775 2850 50  0001 C CNN
+	2    4125 2900
+	-1   0    0    1   
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U1
+U 9 1 5C7995AE
+P 3525 4000
+F 0 "U1" H 3525 4225 50  0000 C CNN
+F 1 "txb0108" H 3525 4134 50  0000 C CNN
+F 2 "" H 3175 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 3175 3950 50  0001 C CNN
+	9    3525 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C799857
+P 4075 4000
+F 0 "#PWR?" H 4075 3850 50  0001 C CNN
+F 1 "+5V" H 4090 4173 50  0000 C CNN
+F 2 "" H 4075 4000 50  0001 C CNN
+F 3 "" H 4075 4000 50  0001 C CNN
+	1    4075 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C79987E
+P 4075 4300
+F 0 "#PWR?" H 4075 4050 50  0001 C CNN
+F 1 "GND" H 4080 4127 50  0000 C CNN
+F 2 "" H 4075 4300 50  0001 C CNN
+F 3 "" H 4075 4300 50  0001 C CNN
+	1    4075 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C7998C6
+P 2975 4000
+F 0 "#PWR?" H 2975 3850 50  0001 C CNN
+F 1 "+3V3" H 2990 4173 50  0000 C CNN
+F 2 "" H 2975 4000 50  0001 C CNN
+F 3 "" H 2975 4000 50  0001 C CNN
+	1    2975 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C79996F
+P 2975 4150
+F 0 "C?" H 2750 4200 50  0000 L CNN
+F 1 "0.1u" H 2700 4125 50  0000 L CNN
+F 2 "" H 3013 4000 50  0001 C CNN
+F 3 "~" H 2975 4150 50  0001 C CNN
+	1    2975 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C799A96
+P 4075 4150
+F 0 "C?" H 4200 4200 50  0000 L CNN
+F 1 "0.1u" H 4200 4125 50  0000 L CNN
+F 2 "" H 4113 4000 50  0001 C CNN
+F 3 "~" H 4075 4150 50  0001 C CNN
+	1    4075 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3875 4000 4075 4000
+Connection ~ 4075 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5C799C12
+P 3875 4100
+F 0 "#PWR?" H 3875 3850 50  0001 C CNN
+F 1 "GND" H 3880 3927 50  0000 C CNN
+F 2 "" H 3875 4100 50  0001 C CNN
+F 3 "" H 3875 4100 50  0001 C CNN
+	1    3875 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3175 4000 3100 4000
+Connection ~ 2975 4000
+Wire Wire Line
+	3175 4100 3100 4100
+Wire Wire Line
+	3100 4100 3100 4000
+Connection ~ 3100 4000
+Wire Wire Line
+	3100 4000 2975 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5C799CFE
+P 2975 4300
+F 0 "#PWR?" H 2975 4050 50  0001 C CNN
+F 1 "GND" H 2980 4127 50  0000 C CNN
+F 2 "" H 2975 4300 50  0001 C CNN
+F 3 "" H 2975 4300 50  0001 C CNN
+	1    2975 4300
+	1    0    0    -1  
+$EndComp
+Connection ~ 3875 2900
+Wire Wire Line
+	3875 2900 3875 3350
+Connection ~ 3275 2900
+Wire Wire Line
+	3275 2900 3275 3250
+Text HLabel 2775 2900 0    50   Output ~ 0
+SDA(3V3)
+Text HLabel 4375 2900 2    50   Output ~ 0
+SCL(3V3)
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 5C79B355
+P 7625 3400
+F 0 "J?" H 7545 2975 50  0000 C CNN
+F 1 "Conn_01x04" H 7545 3066 50  0000 C CNN
+F 2 "" H 7625 3400 50  0001 C CNN
+F 3 "~" H 7625 3400 50  0001 C CNN
+	1    7625 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7825 3200 8475 3200
+Wire Wire Line
+	7825 3300 8475 3300
+Wire Wire Line
+	7825 3400 8475 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5C79B83A
+P 7825 3500
+F 0 "#PWR?" H 7825 3250 50  0001 C CNN
+F 1 "GND" H 7830 3327 50  0000 C CNN
+F 2 "" H 7825 3500 50  0001 C CNN
+F 3 "" H 7825 3500 50  0001 C CNN
+	1    7825 3500
+	1    0    0    -1  
+$EndComp
+Text HLabel 8475 3200 2    50   Output ~ 0
+swdio(3V3)
+Text HLabel 8475 3300 2    50   Output ~ 0
+swclk(3V3)
+Text HLabel 8475 3400 2    50   Output ~ 0
+nrst(3V3)
+Wire Notes Line
+	2075 2000 4950 2000
+Wire Notes Line
+	4950 2000 4950 4650
+Wire Notes Line
+	4950 4650 2075 4650
+Wire Notes Line
+	2075 4650 2075 2000
+Text Notes 2200 2150 0    50   ~ 0
+Bus I2C
+Wire Notes Line
+	7350 2775 9100 2775
+Wire Notes Line
+	9100 2775 9100 3775
+Wire Notes Line
+	9100 3775 7350 3775
+Wire Notes Line
+	7350 3775 7350 2775
+Text Notes 7975 2875 0    50   ~ 0
+Bus de Debug
+$EndSCHEMATC

@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP txb0108
+D Level Shifter 8 bits (VccA < VccB)
+$ENDCMP
+#
+#End Doc Library

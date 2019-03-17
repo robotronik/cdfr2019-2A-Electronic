@@ -1,0 +1,4 @@
+driver brushless L6235D (ST)
+gear 301178
+motor 200142.
+Molex-52207-0433
