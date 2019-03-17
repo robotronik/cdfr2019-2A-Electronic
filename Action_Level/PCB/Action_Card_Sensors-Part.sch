@@ -15,73 +15,311 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_01x02 J_FC_L
+L Connector_Generic:Conn_01x03 J_FC_LT1
 U 1 1 5C8C4F4C
-P 3950 2400
-F 0 "J_FC_L" H 4225 2325 50  0000 C CNN
-F 1 "Conn_01x02" H 4250 2425 50  0000 C CNN
-F 2 "" H 3950 2400 50  0001 C CNN
-F 3 "~" H 3950 2400 50  0001 C CNN
-	1    3950 2400
+P 3925 2375
+F 0 "J_FC_LT1" H 4200 2300 50  0000 C CNN
+F 1 "Conn_01x02" H 4225 2400 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_1x02_P2.54mm_Horizontal" H 3925 2375 50  0001 C CNN
+F 3 "~" H 3925 2375 50  0001 C CNN
+	1    3925 2375
 	-1   0    0    1   
 $EndComp
+Text HLabel 4625 2375 2    50   Output ~ 0
+FC_LT
 $Comp
-L Connector_Generic:Conn_01x02 J_FC_R
-U 1 1 5C8C50CB
-P 3950 2900
-F 0 "J_FC_R" H 4225 2825 50  0000 C CNN
-F 1 "Conn_01x02" H 4250 2925 50  0000 C CNN
-F 2 "" H 3950 2900 50  0001 C CNN
-F 3 "~" H 3950 2900 50  0001 C CNN
-	1    3950 2900
-	-1   0    0    1   
-$EndComp
-Text HLabel 4150 2400 2    50   Output ~ 0
-FC_L
-Text HLabel 4150 2900 2    50   Output ~ 0
-FC_R
-$Comp
-L power:+3V3 #PWR?
+L power:+5V #PWR0183
 U 1 1 5C8C51D4
-P 4150 2300
-F 0 "#PWR?" H 4150 2150 50  0001 C CNN
-F 1 "+3V3" H 4165 2473 50  0000 C CNN
-F 2 "" H 4150 2300 50  0001 C CNN
-F 3 "" H 4150 2300 50  0001 C CNN
-	1    4150 2300
+P 4125 2275
+F 0 "#PWR0183" H 4125 2125 50  0001 C CNN
+F 1 "+5V" H 4140 2448 50  0000 C CNN
+F 2 "" H 4125 2275 50  0001 C CNN
+F 3 "" H 4125 2275 50  0001 C CNN
+	1    4125 2275
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 5C8C51EA
-P 4150 2800
-F 0 "#PWR?" H 4150 2650 50  0001 C CNN
-F 1 "+3V3" H 4165 2973 50  0000 C CNN
-F 2 "" H 4150 2800 50  0001 C CNN
-F 3 "" H 4150 2800 50  0001 C CNN
-	1    4150 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J_TR_AV
+L Connector_Generic:Conn_01x03 J_SENSOR_AV1
 U 1 1 5C8C540B
-P 3950 3650
-F 0 "J_TR_AV" H 4275 3575 50  0000 C CNN
-F 1 "Conn_01x04" H 4275 3650 50  0000 C CNN
-F 2 "" H 3950 3650 50  0001 C CNN
-F 3 "~" H 3950 3650 50  0001 C CNN
-	1    3950 3650
+P 3900 4600
+F 0 "J_SENSOR_AV1" H 4225 4525 50  0000 C CNN
+F 1 "Conn_01x04" H 4225 4600 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_1x04_P2.54mm_Horizontal" H 3900 4600 50  0001 C CNN
+F 3 "~" H 3900 4600 50  0001 C CNN
+	1    3900 4600
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J_TR_AR
+L Connector_Generic:Conn_01x03 J_SENSOR_AR1
 U 1 1 5C8C551D
-P 3950 4175
-F 0 "J_TR_AR" H 4275 4100 50  0000 C CNN
-F 1 "Conn_01x04" H 4275 4175 50  0000 C CNN
-F 2 "" H 3950 4175 50  0001 C CNN
-F 3 "~" H 3950 4175 50  0001 C CNN
-	1    3950 4175
+P 3900 5150
+F 0 "J_SENSOR_AR1" H 4225 5075 50  0000 C CNN
+F 1 "Conn_01x04" H 4225 5150 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_1x04_P2.54mm_Horizontal" H 3900 5150 50  0001 C CNN
+F 3 "~" H 3900 5150 50  0001 C CNN
+	1    3900 5150
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:GND #PWR0184
+U 1 1 5C918AC6
+P 4125 2475
+F 0 "#PWR0184" H 4125 2225 50  0001 C CNN
+F 1 "GND" H 4130 2302 50  0000 C CNN
+F 2 "" H 4125 2475 50  0001 C CNN
+F 3 "" H 4125 2475 50  0001 C CNN
+	1    4125 2475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J_FC_RT1
+U 1 1 5C918BAA
+P 3925 3100
+F 0 "J_FC_RT1" H 4200 3025 50  0000 C CNN
+F 1 "Conn_01x02" H 4225 3125 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_1x02_P2.54mm_Horizontal" H 3925 3100 50  0001 C CNN
+F 3 "~" H 3925 3100 50  0001 C CNN
+	1    3925 3100
+	-1   0    0    1   
+$EndComp
+Text HLabel 4625 3100 2    50   Output ~ 0
+FC_RT
+$Comp
+L power:+5V #PWR0185
+U 1 1 5C918BB2
+P 4125 3000
+F 0 "#PWR0185" H 4125 2850 50  0001 C CNN
+F 1 "+5V" H 4140 3173 50  0000 C CNN
+F 2 "" H 4125 3000 50  0001 C CNN
+F 3 "" H 4125 3000 50  0001 C CNN
+	1    4125 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0186
+U 1 1 5C918BB8
+P 4125 3200
+F 0 "#PWR0186" H 4125 2950 50  0001 C CNN
+F 1 "GND" H 4130 3027 50  0000 C CNN
+F 2 "" H 4125 3200 50  0001 C CNN
+F 3 "" H 4125 3200 50  0001 C CNN
+	1    4125 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U?
+U 3 1 5C918F97
+P 4375 2375
+AR Path="/5C77C74F/5C918F97" Ref="U?"  Part="1" 
+AR Path="/5C8C3FF0/5C918F97" Ref="U1"  Part="3" 
+F 0 "U1" H 4375 2600 50  0000 C CNN
+F 1 "txb0108" H 4375 2509 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4025 2325 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 4025 2325 50  0001 C CNN
+	3    4375 2375
+	-1   0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U?
+U 4 1 5C9192AF
+P 4375 3100
+AR Path="/5C77C74F/5C9192AF" Ref="U?"  Part="1" 
+AR Path="/5C8C3FF0/5C9192AF" Ref="U1"  Part="4" 
+F 0 "U1" H 4375 3325 50  0000 C CNN
+F 1 "txb0108" H 4375 3234 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4025 3050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 4025 3050 50  0001 C CNN
+	4    4375 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J_FC_LB1
+U 1 1 5C91972C
+P 5875 2375
+F 0 "J_FC_LB1" H 6150 2300 50  0000 C CNN
+F 1 "Conn_01x02" H 6175 2400 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_1x02_P2.54mm_Horizontal" H 5875 2375 50  0001 C CNN
+F 3 "~" H 5875 2375 50  0001 C CNN
+	1    5875 2375
+	-1   0    0    1   
+$EndComp
+Text HLabel 6575 2375 2    50   Output ~ 0
+FC_LB
+$Comp
+L power:+5V #PWR0187
+U 1 1 5C919734
+P 6075 2275
+F 0 "#PWR0187" H 6075 2125 50  0001 C CNN
+F 1 "+5V" H 6090 2448 50  0000 C CNN
+F 2 "" H 6075 2275 50  0001 C CNN
+F 3 "" H 6075 2275 50  0001 C CNN
+	1    6075 2275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0188
+U 1 1 5C91973A
+P 6075 2475
+F 0 "#PWR0188" H 6075 2225 50  0001 C CNN
+F 1 "GND" H 6080 2302 50  0000 C CNN
+F 2 "" H 6075 2475 50  0001 C CNN
+F 3 "" H 6075 2475 50  0001 C CNN
+	1    6075 2475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J_FC_RB1
+U 1 1 5C919740
+P 5875 3100
+F 0 "J_FC_RB1" H 6150 3025 50  0000 C CNN
+F 1 "Conn_01x02" H 6175 3125 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_1x02_P2.54mm_Horizontal" H 5875 3100 50  0001 C CNN
+F 3 "~" H 5875 3100 50  0001 C CNN
+	1    5875 3100
+	-1   0    0    1   
+$EndComp
+Text HLabel 6575 3100 2    50   Output ~ 0
+FC_RB
+$Comp
+L power:+5V #PWR0189
+U 1 1 5C919748
+P 6075 3000
+F 0 "#PWR0189" H 6075 2850 50  0001 C CNN
+F 1 "+5V" H 6090 3173 50  0000 C CNN
+F 2 "" H 6075 3000 50  0001 C CNN
+F 3 "" H 6075 3000 50  0001 C CNN
+	1    6075 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0190
+U 1 1 5C91974E
+P 6075 3200
+F 0 "#PWR0190" H 6075 2950 50  0001 C CNN
+F 1 "GND" H 6080 3027 50  0000 C CNN
+F 2 "" H 6075 3200 50  0001 C CNN
+F 3 "" H 6075 3200 50  0001 C CNN
+	1    6075 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U?
+U 5 1 5C919754
+P 6325 2375
+AR Path="/5C77C74F/5C919754" Ref="U?"  Part="1" 
+AR Path="/5C8C3FF0/5C919754" Ref="U1"  Part="5" 
+F 0 "U1" H 6325 2600 50  0000 C CNN
+F 1 "txb0108" H 6325 2509 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5975 2325 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 5975 2325 50  0001 C CNN
+	5    6325 2375
+	-1   0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U?
+U 6 1 5C91975B
+P 6325 3100
+AR Path="/5C77C74F/5C91975B" Ref="U?"  Part="1" 
+AR Path="/5C8C3FF0/5C91975B" Ref="U1"  Part="6" 
+F 0 "U1" H 6325 3325 50  0000 C CNN
+F 1 "txb0108" H 6325 3234 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5975 3050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 5975 3050 50  0001 C CNN
+	6    6325 3100
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	3275 1950 7050 1950
+Wire Notes Line
+	7050 1950 7050 3550
+Wire Notes Line
+	7050 3550 3275 3550
+Wire Notes Line
+	3275 3550 3275 1950
+Text Notes 3300 2050 0    50   ~ 0
+Capteurs fin de courses (2 en haut + 2 en bas)
+Wire Notes Line
+	3275 4125 7025 4125
+Wire Notes Line
+	7025 4125 7025 5525
+Wire Notes Line
+	7025 5525 3275 5525
+Wire Notes Line
+	3275 5525 3275 4125
+Text Notes 3300 4250 0    50   ~ 0
+Capteurs présence palet (1 pour le palet avant et 1 pour le palet arrière)
+$Comp
+L power:GND #PWR0191
+U 1 1 5C91A017
+P 4100 4700
+F 0 "#PWR0191" H 4100 4450 50  0001 C CNN
+F 1 "GND" H 4250 4625 50  0000 C CNN
+F 2 "" H 4100 4700 50  0001 C CNN
+F 3 "" H 4100 4700 50  0001 C CNN
+	1    4100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0192
+U 1 1 5C91A05E
+P 4100 5250
+F 0 "#PWR0192" H 4100 5000 50  0001 C CNN
+F 1 "GND" H 4105 5077 50  0000 C CNN
+F 2 "" H 4100 5250 50  0001 C CNN
+F 3 "" H 4100 5250 50  0001 C CNN
+	1    4100 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0193
+U 1 1 5C91A0A5
+P 4100 4500
+F 0 "#PWR0193" H 4100 4350 50  0001 C CNN
+F 1 "+5V" H 4115 4673 50  0000 C CNN
+F 2 "" H 4100 4500 50  0001 C CNN
+F 3 "" H 4100 4500 50  0001 C CNN
+	1    4100 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0194
+U 1 1 5C91A0D8
+P 4100 5050
+F 0 "#PWR0194" H 4100 4900 50  0001 C CNN
+F 1 "+5V" H 4100 5200 50  0000 C CNN
+F 2 "" H 4100 5050 50  0001 C CNN
+F 3 "" H 4100 5050 50  0001 C CNN
+	1    4100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U?
+U 7 1 5C91A2AA
+P 4350 4600
+AR Path="/5C77C74F/5C91A2AA" Ref="U?"  Part="1" 
+AR Path="/5C8C3FF0/5C91A2AA" Ref="U1"  Part="7" 
+F 0 "U1" H 4350 4825 50  0000 C CNN
+F 1 "txb0108" H 4350 4734 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4000 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 4000 4550 50  0001 C CNN
+	7    4350 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L stm32f042k6tx:txb0108 U?
+U 8 1 5C91A312
+P 4350 5150
+AR Path="/5C77C74F/5C91A312" Ref="U?"  Part="1" 
+AR Path="/5C8C3FF0/5C91A312" Ref="U1"  Part="8" 
+F 0 "U1" H 4350 5375 50  0000 C CNN
+F 1 "txb0108" H 4350 5284 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4000 5100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0108.pdf" H 4000 5100 50  0001 C CNN
+	8    4350 5150
+	-1   0    0    -1  
+$EndComp
+Text HLabel 4600 4600 2    50   Output ~ 0
+SENSOR_AV
+Text HLabel 4600 5150 2    50   Output ~ 0
+SENSOR_AR
 $EndSCHEMATC
