@@ -150,4 +150,78 @@ Wire Wire Line
 	4050 3350 4700 3350
 Wire Wire Line
 	4050 3425 4700 3425
+$Comp
+L Propulsion_control:Trou-3 U10
+U 1 1 5C8EDF38
+P 1750 5825
+F 0 "U10" H 1878 5878 60  0000 L CNN
+F 1 "Trou-3" H 1878 5772 60  0000 L CNN
+F 2 "maxon:Trou-3" H 1750 5825 60  0001 C CNN
+F 3 "" H 1750 5825 60  0000 C CNN
+	1    1750 5825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Propulsion_control:Trou-3 U11
+U 1 1 5C8EDF90
+P 1750 6050
+F 0 "U11" H 1878 6103 60  0000 L CNN
+F 1 "Trou-3" H 1878 5997 60  0000 L CNN
+F 2 "maxon:Trou-3" H 1750 6050 60  0001 C CNN
+F 3 "" H 1750 6050 60  0000 C CNN
+	1    1750 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Propulsion_control:Trou-3 U12
+U 1 1 5C8EDFBA
+P 1750 6275
+F 0 "U12" H 1878 6328 60  0000 L CNN
+F 1 "Trou-3" H 1878 6222 60  0000 L CNN
+F 2 "maxon:Trou-3" H 1750 6275 60  0001 C CNN
+F 3 "" H 1750 6275 60  0000 C CNN
+	1    1750 6275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Propulsion_control:Trou-3 U13
+U 1 1 5C8EDFD7
+P 1750 6500
+F 0 "U13" H 1878 6553 60  0000 L CNN
+F 1 "Trou-3" H 1878 6447 60  0000 L CNN
+F 2 "maxon:Trou-3" H 1750 6500 60  0001 C CNN
+F 3 "" H 1750 6500 60  0000 C CNN
+	1    1750 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5C8EE033
+P 1300 6650
+F 0 "#PWR01" H 1300 6400 50  0001 C CNN
+F 1 "GND" H 1305 6477 50  0000 C CNN
+F 2 "" H 1300 6650 50  0001 C CNN
+F 3 "" H 1300 6650 50  0001 C CNN
+	1    1300 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 5825 1300 5825
+Wire Wire Line
+	1300 5825 1300 6050
+Wire Wire Line
+	1450 6050 1300 6050
+Connection ~ 1300 6050
+Wire Wire Line
+	1300 6050 1300 6275
+Wire Wire Line
+	1450 6275 1300 6275
+Connection ~ 1300 6275
+Wire Wire Line
+	1300 6275 1300 6500
+Wire Wire Line
+	1450 6500 1300 6500
+Connection ~ 1300 6500
+Wire Wire Line
+	1300 6500 1300 6650
 $EndSCHEMATC

@@ -118,28 +118,14 @@ $EndComp
 $Comp
 L power:GND #PWR0173
 U 1 1 5C8E777B
-P 4300 3475
-F 0 "#PWR0173" H 4300 3225 50  0001 C CNN
-F 1 "GND" H 4150 3400 50  0000 C CNN
-F 2 "" H 4300 3475 50  0001 C CNN
-F 3 "" H 4300 3475 50  0001 C CNN
-	1    4300 3475
+P 4250 3675
+F 0 "#PWR0173" H 4250 3425 50  0001 C CNN
+F 1 "GND" H 4250 3525 50  0000 C CNN
+F 2 "" H 4250 3675 50  0001 C CNN
+F 3 "" H 4250 3675 50  0001 C CNN
+	1    4250 3675
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4500 3275 4300 3275
-Wire Wire Line
-	4300 3275 4300 3375
-Wire Wire Line
-	4500 3375 4300 3375
-Connection ~ 4300 3375
-Wire Wire Line
-	4300 3375 4300 3475
-Wire Wire Line
-	4500 3475 4300 3475
-Connection ~ 4300 3475
-Text Notes 3400 3400 0    50   ~ 0
-Pas de microstepping
 Text HLabel 3950 3075 0    50   Input ~ 0
 DIR_PaP
 Text HLabel 3950 2975 0    50   Input ~ 0
@@ -301,30 +287,7 @@ F 3 "" H 4900 5825 50  0001 C CNN
 	1    4900 5825
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0180
-U 1 1 5C8EB6F8
-P 4300 5625
-F 0 "#PWR0180" H 4300 5375 50  0001 C CNN
-F 1 "GND" H 4150 5550 50  0000 C CNN
-F 2 "" H 4300 5625 50  0001 C CNN
-F 3 "" H 4300 5625 50  0001 C CNN
-	1    4300 5625
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4500 5425 4300 5425
-Wire Wire Line
-	4300 5425 4300 5525
-Wire Wire Line
-	4500 5525 4300 5525
-Connection ~ 4300 5525
-Wire Wire Line
-	4300 5525 4300 5625
-Wire Wire Line
-	4500 5625 4300 5625
-Connection ~ 4300 5625
-Text Notes 3400 5550 0    50   ~ 0
+Text Notes 3350 5550 0    50   ~ 0
 Pas de microstepping
 Text HLabel 3950 5225 0    50   Input ~ 0
 DIR_PaP
@@ -388,4 +351,45 @@ Wire Wire Line
 Connection ~ 4900 4350
 NoConn ~ 4500 2475
 NoConn ~ 4500 4625
+$Comp
+L power:GND #PWR0204
+U 1 1 5C8FE06E
+P 4250 5825
+F 0 "#PWR0204" H 4250 5575 50  0001 C CNN
+F 1 "GND" H 4250 5675 50  0000 C CNN
+F 2 "" H 4250 5825 50  0001 C CNN
+F 3 "" H 4250 5825 50  0001 C CNN
+	1    4250 5825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3475 4250 3675
+Wire Wire Line
+	4250 3475 4500 3475
+Text Notes 3350 3425 0    50   ~ 0
+Pas de microstepping
+Wire Wire Line
+	4500 3375 4250 3375
+Wire Wire Line
+	4250 3375 4250 3475
+Connection ~ 4250 3475
+Wire Wire Line
+	4500 3275 4250 3275
+Wire Wire Line
+	4250 3275 4250 3375
+Connection ~ 4250 3375
+Wire Wire Line
+	4500 5425 4250 5425
+Wire Wire Line
+	4250 5425 4250 5525
+Wire Wire Line
+	4500 5525 4250 5525
+Connection ~ 4250 5525
+Wire Wire Line
+	4250 5525 4250 5625
+Wire Wire Line
+	4500 5625 4250 5625
+Connection ~ 4250 5625
+Wire Wire Line
+	4250 5625 4250 5825
 $EndSCHEMATC

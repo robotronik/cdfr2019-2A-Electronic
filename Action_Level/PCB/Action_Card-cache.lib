@@ -360,6 +360,19 @@ X ~EN 9 -400 0 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
+# Propulsion_control:Trou-3
+#
+DEF Propulsion_control:Trou-3 U 0 40 Y Y 1 F N
+F0 "U" 0 0 60 H V C CNN
+F1 "Propulsion_control:Trou-3" 0 150 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+C 0 0 100 0 1 0 N
+X 1 1 -300 0 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # Regulator_Linear:LM317_3PinPackage
 #
 DEF Regulator_Linear:LM317_3PinPackage U 0 10 Y Y 1 F N
