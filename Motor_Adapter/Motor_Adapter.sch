@@ -1,0 +1,140 @@
+EESchema Schematic File Version 5
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6300 1200 6500 1200
+Wire Wire Line
+	6500 1300 6300 1300
+Wire Wire Line
+	6300 1400 6500 1400
+Wire Wire Line
+	6500 1500 6300 1500
+Wire Wire Line
+	6300 1600 6500 1600
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 5CD1482A
+P 6100 4200
+F 0 "J5" H 6100 4000 50  0000 C CNN
+F 1 "Windings" V 6200 4200 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal" H 6100 4200 50  0001 C CNN
+F 3 "~" H 6100 4200 50  0001 C CNN
+	1    6100 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J6
+U 1 1 5CD14839
+P 6100 3400
+F 0 "J6" H 6100 3100 50  0000 C CNN
+F 1 "Hall_Sensor" V 6200 3400 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal" H 6100 3400 50  0001 C CNN
+F 3 "~" H 6100 3400 50  0001 C CNN
+	1    6100 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6300 3200 6500 3200
+Wire Wire Line
+	6500 3300 6300 3300
+Wire Wire Line
+	6300 3400 6500 3400
+Wire Wire Line
+	6500 3500 6300 3500
+Wire Wire Line
+	6300 3600 6500 3600
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5CD0D5C7
+P 6100 2200
+F 0 "J2" H 6100 2000 50  0000 C CNN
+F 1 "Windings" V 6200 2200 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_S3B-XH-A_1x03_P2.50mm_Horizontal" H 6100 2200 50  0001 C CNN
+F 3 "~" H 6100 2200 50  0001 C CNN
+	1    6100 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6500 1800 6500 1900
+Wire Wire Line
+	6500 2100 6500 2200
+Wire Wire Line
+	6500 2400 6500 2500
+Wire Wire Line
+	6300 2200 6500 2200
+Wire Wire Line
+	6500 2400 6300 2400
+Wire Wire Line
+	6300 2400 6300 2300
+Wire Wire Line
+	6500 1900 6300 1900
+Wire Wire Line
+	6300 1900 6300 2100
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 5CD0D843
+P 6100 1400
+F 0 "J3" H 6100 1100 50  0000 C CNN
+F 1 "Hall_Sensor" V 6200 1400 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S5B-PH-K_1x05_P2.00mm_Horizontal" H 6100 1400 50  0001 C CNN
+F 3 "~" H 6100 1400 50  0001 C CNN
+	1    6100 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Molex_FFC-FPC:Maxon-200142 K2
+U 1 1 5CD0CD02
+P 7100 3400
+F 0 "K2" H 7550 3100 60  0000 L CNN
+F 1 "Maxon-200142" H 7550 2950 60  0000 L CNN
+F 2 "Molex_FFC-FPC:Molex-52610-1133" H 7550 2850 60  0000 L CNN
+F 3 "" H 6600 3500 60  0000 C CNN
+	1    7100 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3800 6500 3900
+Wire Wire Line
+	6500 4100 6500 4200
+Wire Wire Line
+	6500 4400 6500 4500
+Wire Wire Line
+	6300 4200 6500 4200
+Wire Wire Line
+	6500 4400 6300 4400
+Wire Wire Line
+	6500 3900 6300 3900
+Connection ~ 6500 3900
+Connection ~ 6500 4200
+Connection ~ 6500 4400
+$Comp
+L Molex_FFC-FPC:Maxon-200142 K1
+U 1 1 5CD10FED
+P 7100 1400
+F 0 "K1" H 7550 1100 60  0000 L CNN
+F 1 "Maxon-200142" H 7550 950 60  0000 L CNN
+F 2 "Molex_FFC-FPC:Molex-52610-1133" H 7550 850 60  0000 L CNN
+F 3 "" H 6600 1500 60  0000 C CNN
+	1    7100 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6500 2400
+Connection ~ 6500 2200
+Connection ~ 6500 1900
+Wire Wire Line
+	6300 4300 6300 4400
+Wire Wire Line
+	6300 4100 6300 3900
+$EndSCHEMATC

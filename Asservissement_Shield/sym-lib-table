@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Propulsion_control")(type "Legacy")(uri "${KIPRJMOD}/libraries/Propulsion_control.lib")(options "")(descr ""))
+)
