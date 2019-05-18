@@ -1,4 +1,4 @@
-EESchema Schematic File Version 5
+EESchema Schematic File Version 4
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,43 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector_Generic:Conn_01x04 J1
-U 1 1 5CD4020B
-P 2300 1900
-F 0 "J1" H 2200 1450 50  0000 C CNN
-F 1 "Conn_01x04" H 2200 1550 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2300 1900 50  0001 C CNN
-F 3 "~" H 2300 1900 50  0001 C CNN
-	1    2300 1900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR0101
-U 1 1 5CD416C7
-P 2500 2000
-F 0 "#PWR0101" H 2500 1850 50  0001 C CNN
-F 1 "+5V" V 2500 2100 50  0000 L CNN
-F 2 "" H 2500 2000 50  0001 C CNN
-F 3 "" H 2500 2000 50  0001 C CNN
-	1    2500 2000
-	0    1    1    0   
-$EndComp
-Text Label 2500 1900 0    50   ~ 0
-A_Out
-Text Label 2500 1700 0    50   ~ 0
-B_Out
-$Comp
-L power:GND #PWR0102
-U 1 1 5CD41CCB
-P 2500 1800
-F 0 "#PWR0102" H 2500 1550 50  0001 C CNN
-F 1 "GND" V 2500 1700 50  0000 R CNN
-F 2 "" H 2500 1800 50  0001 C CNN
-F 3 "" H 2500 1800 50  0001 C CNN
-	1    2500 1800
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J2
 U 1 1 5CD42275
@@ -72,10 +35,6 @@ F 3 "" H 4000 2000 50  0001 C CNN
 	1    4000 2000
 	0    -1   1    0   
 $EndComp
-Text Label 4000 1900 2    50   ~ 0
-A_In
-Text Label 4000 1700 2    50   ~ 0
-B_In
 $Comp
 L power:GND #PWR0104
 U 1 1 5CD4228D
@@ -87,10 +46,6 @@ F 3 "" H 4000 1800 50  0001 C CNN
 	1    4000 1800
 	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	2500 1700 3000 1700
-Wire Wire Line
-	3000 1900 2500 1900
 Wire Wire Line
 	3300 1900 4000 1900
 Wire Wire Line
@@ -161,6 +116,185 @@ F 3 "~" H 3150 1900 50  0001 C CNN
 	1    3150 1900
 	0    1    1    0   
 $EndComp
-Connection ~ 3000 1700
 Connection ~ 3000 1900
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 5CE008D4
+P 4200 3000
+F 0 "J3" H 4100 2550 50  0000 C CNN
+F 1 "Conn_01x04" H 4100 2650 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 4200 3000 50  0001 C CNN
+F 3 "~" H 4200 3000 50  0001 C CNN
+	1    4200 3000
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5CE008DE
+P 4000 3100
+F 0 "#PWR0101" H 4000 2950 50  0001 C CNN
+F 1 "+5V" V 4000 3200 50  0000 L CNN
+F 2 "" H 4000 3100 50  0001 C CNN
+F 3 "" H 4000 3100 50  0001 C CNN
+	1    4000 3100
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5CE008EA
+P 4000 2900
+F 0 "#PWR0102" H 4000 2650 50  0001 C CNN
+F 1 "GND" V 4000 2800 50  0000 R CNN
+F 2 "" H 4000 2900 50  0001 C CNN
+F 3 "" H 4000 2900 50  0001 C CNN
+	1    4000 2900
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2500 2800 3000 2800
+Wire Wire Line
+	3300 3000 4000 3000
+Wire Wire Line
+	4000 2800 3300 2800
+$Comp
+L Device:R R7
+U 1 1 5CE008F8
+P 3150 2800
+F 0 "R7" V 3250 2800 50  0000 C CNN
+F 1 "5.4k" V 3150 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3080 2800 50  0001 C CNN
+F 3 "~" H 3150 2800 50  0001 C CNN
+	1    3150 2800
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5CE00902
+P 3000 2500
+F 0 "#PWR0107" H 3000 2250 50  0001 C CNN
+F 1 "GND" H 3000 2350 50  0001 C CNN
+F 2 "" H 3000 2500 50  0001 C CNN
+F 3 "" H 3000 2500 50  0001 C CNN
+	1    3000 2500
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5CE0090C
+P 3000 2650
+F 0 "R5" V 3100 2650 50  0000 C CNN
+F 1 "10k" V 3000 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2930 2650 50  0001 C CNN
+F 3 "~" H 3000 2650 50  0001 C CNN
+	1    3000 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5CE00916
+P 3000 3150
+F 0 "R6" V 3100 3150 50  0000 C CNN
+F 1 "10k" V 3000 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2930 3150 50  0001 C CNN
+F 3 "~" H 3000 3150 50  0001 C CNN
+	1    3000 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5CE00920
+P 3000 3300
+F 0 "#PWR0108" H 3000 3050 50  0001 C CNN
+F 1 "GND" H 3000 3150 50  0001 C CNN
+F 2 "" H 3000 3300 50  0001 C CNN
+F 3 "" H 3000 3300 50  0001 C CNN
+	1    3000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5CE0092A
+P 3150 3000
+F 0 "R8" V 3250 3000 50  0000 C CNN
+F 1 "5.4k" V 3150 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3080 3000 50  0001 C CNN
+F 3 "~" H 3150 3000 50  0001 C CNN
+	1    3150 3000
+	0    1    1    0   
+$EndComp
+Connection ~ 3000 2800
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5CE1A980
+P 2300 1900
+F 0 "J1" H 2200 1450 50  0000 C CNN
+F 1 "Conn_01x04" H 2200 1550 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2300 1900 50  0001 C CNN
+F 3 "~" H 2300 1900 50  0001 C CNN
+	1    2300 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 5CE1A98A
+P 2500 2000
+F 0 "#PWR0109" H 2500 1850 50  0001 C CNN
+F 1 "+5V" V 2500 2100 50  0000 L CNN
+F 2 "" H 2500 2000 50  0001 C CNN
+F 3 "" H 2500 2000 50  0001 C CNN
+	1    2500 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5CE1A994
+P 2500 1800
+F 0 "#PWR0110" H 2500 1550 50  0001 C CNN
+F 1 "GND" V 2500 1700 50  0000 R CNN
+F 2 "" H 2500 1800 50  0001 C CNN
+F 3 "" H 2500 1800 50  0001 C CNN
+	1    2500 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 5CE1A9A0
+P 2300 3000
+F 0 "J4" H 2200 2550 50  0000 C CNN
+F 1 "Conn_01x04" H 2200 2650 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 2300 3000 50  0001 C CNN
+F 3 "~" H 2300 3000 50  0001 C CNN
+	1    2300 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0111
+U 1 1 5CE1A9AA
+P 2500 3100
+F 0 "#PWR0111" H 2500 2950 50  0001 C CNN
+F 1 "+5V" V 2500 3200 50  0000 L CNN
+F 2 "" H 2500 3100 50  0001 C CNN
+F 3 "" H 2500 3100 50  0001 C CNN
+	1    2500 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5CE1A9B6
+P 2500 2900
+F 0 "#PWR0112" H 2500 2650 50  0001 C CNN
+F 1 "GND" V 2500 2800 50  0000 R CNN
+F 2 "" H 2500 2900 50  0001 C CNN
+F 3 "" H 2500 2900 50  0001 C CNN
+	1    2500 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 1900 3000 1900
+Wire Wire Line
+	2500 3000 3000 3000
+Connection ~ 3000 3000
+Wire Wire Line
+	2500 1700 3000 1700
+Connection ~ 3000 1700
 $EndSCHEMATC
