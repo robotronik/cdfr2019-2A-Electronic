@@ -1,5 +1,5 @@
-EESchema Schematic File Version 5
-EELAYER 29 0
+EESchema Schematic File Version 4
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -22,7 +22,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1500 6300 1500
 Wire Wire Line
-	6300 1600 6500 1600
+	6300 1600 6400 1600
 $Comp
 L Connector_Generic:Conn_01x03 J5
 U 1 1 5CD1482A
@@ -54,7 +54,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3500 6300 3500
 Wire Wire Line
-	6300 3600 6500 3600
+	6300 3600 6400 3600
 $Comp
 L Connector_Generic:Conn_01x03 J2
 U 1 1 5CD0D5C7
@@ -137,4 +137,112 @@ Wire Wire Line
 	6300 4300 6300 4400
 Wire Wire Line
 	6300 4100 6300 3900
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5D960175
+P 4000 1350
+F 0 "H4" H 4100 1401 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4100 1310 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 4000 1350 50  0001 C CNN
+F 3 "~" H 4000 1350 50  0001 C CNN
+	1    4000 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5D96024A
+P 3150 1350
+F 0 "H3" H 3250 1401 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3250 1310 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 3150 1350 50  0001 C CNN
+F 3 "~" H 3150 1350 50  0001 C CNN
+	1    3150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5D960320
+P 2300 1350
+F 0 "H2" H 2400 1401 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2400 1310 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 2300 1350 50  0001 C CNN
+F 3 "~" H 2300 1350 50  0001 C CNN
+	1    2300 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5D960370
+P 1450 1350
+F 0 "H1" H 1550 1401 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1550 1310 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1450 1350 50  0001 C CNN
+F 3 "~" H 1450 1350 50  0001 C CNN
+	1    1450 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1450 3150 1450
+Connection ~ 2300 1450
+Wire Wire Line
+	2300 1450 1450 1450
+Connection ~ 3150 1450
+Wire Wire Line
+	3150 1450 2800 1450
+$Comp
+L power:GND #PWR0101
+U 1 1 5D9607C3
+P 2800 1700
+F 0 "#PWR0101" H 2800 1450 50  0001 C CNN
+F 1 "GND" H 2805 1527 50  0000 C CNN
+F 2 "" H 2800 1700 50  0001 C CNN
+F 3 "" H 2800 1700 50  0001 C CNN
+	1    2800 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1700 2800 1450
+Connection ~ 2800 1450
+Wire Wire Line
+	2800 1450 2300 1450
+$Comp
+L power:GND #PWR?
+U 1 1 5D960CFA
+P 5800 1850
+F 0 "#PWR?" H 5800 1600 50  0001 C CNN
+F 1 "GND" H 5805 1677 50  0000 C CNN
+F 2 "" H 5800 1850 50  0001 C CNN
+F 3 "" H 5800 1850 50  0001 C CNN
+	1    5800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D960D19
+P 5850 3800
+F 0 "#PWR?" H 5850 3550 50  0001 C CNN
+F 1 "GND" H 5855 3627 50  0000 C CNN
+F 2 "" H 5850 3800 50  0001 C CNN
+F 3 "" H 5850 3800 50  0001 C CNN
+	1    5850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1850 5800 1750
+Wire Wire Line
+	5800 1750 6400 1750
+Wire Wire Line
+	6400 1750 6400 1600
+Connection ~ 6400 1600
+Wire Wire Line
+	6400 1600 6500 1600
+Wire Wire Line
+	5850 3800 5850 3750
+Wire Wire Line
+	5850 3750 6400 3750
+Wire Wire Line
+	6400 3750 6400 3600
+Connection ~ 6400 3600
+Wire Wire Line
+	6400 3600 6500 3600
 $EndSCHEMATC
