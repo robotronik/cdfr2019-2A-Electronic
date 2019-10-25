@@ -78,7 +78,7 @@ U 1 1 5962811E
 P 3100 4525
 F 0 "Rtacho1" V 3180 4525 50  0000 C CNN
 F 1 "1k" V 3100 4525 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 3030 4525 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3030 4525 50  0001 C CNN
 F 3 "" H 3100 4525 50  0001 C CNN
 F 4 "https://fr.farnell.com/te-connectivity/crgcq1206j1k0/res-aec-q200-couche-epaisse-1k/dp/2861950?st=Résistance%201kohm%201206" H 1625 1700 50  0001 C CNN "RS-1"
 	1    3100 4525
@@ -458,12 +458,8 @@ Wire Wire Line
 Wire Wire Line
 	3250 4525 4450 4525
 Wire Wire Line
-	3375 3975 3375 4275
-Wire Wire Line
 	3375 4275 4450 4275
 Connection ~ 3250 4525
-Wire Wire Line
-	3850 3725 3850 3600
 $Comp
 L Device:LED Dalim1
 U 1 1 5D965CDE
@@ -569,12 +565,12 @@ Connection ~ 10350 1550
 Wire Wire Line
 	10350 1850 10350 1900
 $Comp
-L 2:B_Plug_5mm U1
+L 2:B_Plug_5mm Alim12
 U 1 1 5D96FFC2
 P 7550 1350
-F 0 "U1" H 7491 1647 60  0000 C CNN
+F 0 "Alim12" H 7491 1647 60  0000 C CNN
 F 1 "B_Plug_5mm" H 7491 1541 60  0000 C CNN
-F 2 "B plug:Bplug-5mm" H 7550 1350 60  0001 C CNN
+F 2 "Connector_JST:JST_NV_B02P-NV_1x02_P5.00mm_Vertical" H 7550 1350 60  0001 C CNN
 F 3 "" H 7550 1350 60  0000 C CNN
 	1    7550 1350
 	1    0    0    -1  
@@ -582,12 +578,12 @@ $EndComp
 $Comp
 L Device:D_Schottky MBR1045
 U 1 1 5D974571
-P 8050 1300
-F 0 "MBR1045" H 8050 1084 50  0000 C CNN
-F 1 "D_Schottky" H 8050 1175 50  0000 C CNN
-F 2 "" H 8050 1300 50  0001 C CNN
-F 3 "~" H 8050 1300 50  0001 C CNN
-	1    8050 1300
+P 8100 1400
+F 0 "MBR1045" H 8100 1184 50  0000 C CNN
+F 1 "D_Schottky" H 8100 1275 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220F-2_Vertical" H 8100 1400 50  0001 C CNN
+F 3 "~" H 8100 1400 50  0001 C CNN
+	1    8100 1400
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -601,27 +597,21 @@ F 3 "" H 7800 1600 50  0001 C CNN
 	1    7800 1600
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	7650 1400 7800 1400
-Wire Wire Line
-	7800 1400 7800 1500
-Wire Wire Line
-	7900 1300 7650 1300
 $Comp
 L power:+12V #PWR0107
 U 1 1 5D9787E7
-P 8450 1050
-F 0 "#PWR0107" H 8450 900 50  0001 C CNN
-F 1 "+12V" H 8465 1223 50  0000 C CNN
-F 2 "" H 8450 1050 50  0001 C CNN
-F 3 "" H 8450 1050 50  0001 C CNN
-	1    8450 1050
+P 8500 1150
+F 0 "#PWR0107" H 8500 1000 50  0001 C CNN
+F 1 "+12V" H 8515 1323 50  0000 C CNN
+F 2 "" H 8500 1150 50  0001 C CNN
+F 3 "" H 8500 1150 50  0001 C CNN
+	1    8500 1150
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8200 1300 8375 1300
+	8250 1400 8425 1400
 Wire Wire Line
-	8450 1300 8450 1050
+	8500 1400 8500 1150
 $Comp
 L Device:CP Cdecou1
 U 1 1 5D97AB8A
@@ -743,11 +733,7 @@ Wire Wire Line
 Wire Wire Line
 	6525 4825 6525 5275
 Wire Wire Line
-	5900 4575 7875 4575
-Wire Wire Line
 	5900 4475 7875 4475
-Wire Wire Line
-	5900 4375 7875 4375
 Text Notes 8025 4800 0    50   ~ 0
 Moteur  Maxon 200142
 Text Notes 3725 3100 0    50   ~ 0
@@ -792,13 +778,6 @@ F 3 "~" H 2975 3250 50  0001 C CNN
 	1    2975 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2925 3975 2975 3975
-Wire Wire Line
-	2900 4100 3250 4100
-Wire Wire Line
-	2975 3400 2975 3975
-Connection ~ 2975 3975
 Wire Wire Line
 	2975 3100 2975 2900
 $Comp
@@ -857,44 +836,38 @@ Wire Wire Line
 	1750 4250 1750 4100
 Wire Wire Line
 	1750 4100 1650 4100
-Text Notes 1125 3650 0    50   ~ 0
-DIAG
-Text Notes 1200 3750 0    50   ~ 0
-EN
 Text Notes 1175 3850 0    50   ~ 0
+DIAG
+Text Notes 1225 3650 0    50   ~ 0
+EN
+Text Notes 1200 3750 0    50   ~ 0
 DIR
-Text Notes 1075 3950 0    50   ~ 0
+Text Notes 1125 4050 0    50   ~ 0
 FREIN
-Text Notes 675  4050 0    50   ~ 0
+Text Notes 700  3950 0    50   ~ 0
 (VITESSE) TACHO
 Wire Wire Line
 	3250 4100 3250 4525
-Wire Wire Line
-	2975 3975 3375 3975
 Wire Wire Line
 	2925 3850 3500 3850
 Wire Wire Line
 	2925 3700 2925 3725
 Wire Wire Line
 	2925 3800 2925 3850
-Wire Wire Line
-	2925 3975 2925 3900
-Wire Wire Line
-	2900 4000 2900 4100
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5DB42EA6
-P 8375 1300
-F 0 "#FLG0101" H 8375 1375 50  0001 C CNN
-F 1 "PWR_FLAG" H 8375 1474 50  0000 C CNN
-F 2 "" H 8375 1300 50  0001 C CNN
-F 3 "~" H 8375 1300 50  0001 C CNN
-	1    8375 1300
+P 8425 1400
+F 0 "#FLG0101" H 8425 1475 50  0001 C CNN
+F 1 "PWR_FLAG" H 8425 1574 50  0000 C CNN
+F 2 "" H 8425 1400 50  0001 C CNN
+F 3 "~" H 8425 1400 50  0001 C CNN
+	1    8425 1400
 	1    0    0    -1  
 $EndComp
-Connection ~ 8375 1300
+Connection ~ 8425 1400
 Wire Wire Line
-	8375 1300 8450 1300
+	8425 1400 8500 1400
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5DB432D8
@@ -928,16 +901,6 @@ F 3 "~" H 1900 4650 50  0001 C CNN
 	1    1900 4650
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1650 3600 3850 3600
-Wire Wire Line
-	1650 3700 1900 3700
-Wire Wire Line
-	1650 3800 2925 3800
-Wire Wire Line
-	1650 3900 2925 3900
-Wire Wire Line
-	1650 4000 2900 4000
 $Comp
 L Device:R Rled2
 U 1 1 5DB76D7F
@@ -951,7 +914,6 @@ F 3 "~" H 1900 5025 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1900 4500 1900 3700
-Connection ~ 1900 3700
 Wire Wire Line
 	1900 3700 2475 3700
 Wire Wire Line
@@ -1059,4 +1021,62 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 9750 1250 50  0001 C CNN
 	1    9750 1250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5900 4375 7550 4375
+Wire Wire Line
+	7550 4375 7550 4575
+Wire Wire Line
+	7550 4575 7875 4575
+Wire Wire Line
+	7625 4375 7625 4525
+Wire Wire Line
+	7625 4525 6325 4525
+Wire Wire Line
+	6325 4525 6325 4575
+Wire Wire Line
+	6325 4575 5900 4575
+Wire Wire Line
+	7625 4375 7875 4375
+Text Notes 7125 900  0    50   ~ 0
+diode de protection contre les\ninversions de polarité de l'alim
+Wire Wire Line
+	7650 1300 7800 1300
+Wire Wire Line
+	7800 1300 7800 1500
+Wire Wire Line
+	7950 1400 7650 1400
+Wire Wire Line
+	1900 3700 1900 3600
+Wire Wire Line
+	1900 3600 1650 3600
+Connection ~ 1900 3700
+Wire Wire Line
+	1650 3700 1800 3700
+Wire Wire Line
+	1800 3700 1800 3800
+Wire Wire Line
+	1800 3800 2925 3800
+Wire Wire Line
+	1650 3800 1725 3800
+Wire Wire Line
+	1725 3800 1725 3525
+Wire Wire Line
+	1725 3525 3850 3525
+Wire Wire Line
+	3850 3525 3850 3725
+Wire Wire Line
+	3375 4000 3375 4275
+Wire Wire Line
+	1650 4000 2975 4000
+Wire Wire Line
+	2975 3400 2975 4000
+Connection ~ 2975 4000
+Wire Wire Line
+	2975 4000 3375 4000
+Wire Wire Line
+	2150 4100 2150 3900
+Wire Wire Line
+	2150 3900 1650 3900
+Wire Wire Line
+	2150 4100 3250 4100
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=jeu. 24 oct. 2019 18:59:43 CEST
+update=ven. 25 oct. 2019 11:23:57 CEST
 version=1
 last_client=eeschema
 [general]
