@@ -75,14 +75,14 @@ $EndComp
 $Comp
 L Device:R Rtacho1
 U 1 1 5962811E
-P 3100 4525
-F 0 "Rtacho1" V 3180 4525 50  0000 C CNN
-F 1 "1k" V 3100 4525 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3030 4525 50  0001 C CNN
-F 3 "" H 3100 4525 50  0001 C CNN
-F 4 "https://fr.farnell.com/te-connectivity/crgcq1206j1k0/res-aec-q200-couche-epaisse-1k/dp/2861950?st=Résistance%201kohm%201206" H 1625 1700 50  0001 C CNN "RS-1"
-	1    3100 4525
-	0    -1   1    0   
+P 2750 3250
+F 0 "Rtacho1" V 2830 3250 50  0000 C CNN
+F 1 "1k" V 2750 3250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2680 3250 50  0001 C CNN
+F 3 "" H 2750 3250 50  0001 C CNN
+F 4 "https://fr.farnell.com/te-connectivity/crgcq1206j1k0/res-aec-q200-couche-epaisse-1k/dp/2861950?st=Résistance%201kohm%201206" H 1275 425 50  0001 C CNN "RS-1"
+	1    2750 3250
+	-1   0    0    -1  
 $EndComp
 Text Notes 4625 2875 0    60   ~ 0
 ATTENTION : régler vref et rsense
@@ -362,12 +362,12 @@ Connection ~ 3700 5150
 $Comp
 L power:+5V #PWR02
 U 1 1 5C656252
-P 2950 4525
-F 0 "#PWR02" H 2950 4375 50  0001 C CNN
-F 1 "+5V" H 2950 4675 50  0000 C CNN
-F 2 "" H 2950 4525 50  0001 C CNN
-F 3 "" H 2950 4525 50  0001 C CNN
-	1    2950 4525
+P 2750 2900
+F 0 "#PWR02" H 2750 2750 50  0001 C CNN
+F 1 "+5V" H 2750 3050 50  0000 C CNN
+F 2 "" H 2750 2900 50  0001 C CNN
+F 3 "" H 2750 2900 50  0001 C CNN
+	1    2750 2900
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -446,20 +446,11 @@ Wire Wire Line
 	4125 5150 4000 5150
 Connection ~ 4000 5150
 Wire Wire Line
-	4450 4475 4450 4525
-Wire Wire Line
 	4450 4075 4025 4075
 Wire Wire Line
 	4025 4075 4025 4225
 Wire Wire Line
-	4025 4225 3500 4225
-Wire Wire Line
-	3500 4225 3500 3850
-Wire Wire Line
-	3250 4525 4450 4525
-Wire Wire Line
 	3375 4275 4450 4275
-Connection ~ 3250 4525
 $Comp
 L Device:LED Dalim1
 U 1 1 5D965CDE
@@ -813,47 +804,35 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x06_Male Jstm32
 U 1 1 5DAFA28D
-P 1450 3800
-F 0 "Jstm32" H 1556 4178 50  0000 C CNN
-F 1 "Conn_01x06_Male" H 1556 4087 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1450 3800 50  0001 C CNN
-F 3 "~" H 1450 3800 50  0001 C CNN
-	1    1450 3800
+P 1200 3925
+F 0 "Jstm32" H 1225 4375 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1250 4275 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1200 3925 50  0001 C CNN
+F 3 "~" H 1200 3925 50  0001 C CNN
+	1    1200 3925
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0113
 U 1 1 5DB0EF46
-P 1750 4250
-F 0 "#PWR0113" H 1750 4000 50  0001 C CNN
-F 1 "GND" H 1755 4077 50  0000 C CNN
-F 2 "" H 1750 4250 50  0001 C CNN
-F 3 "" H 1750 4250 50  0001 C CNN
-	1    1750 4250
+P 1500 4325
+F 0 "#PWR0113" H 1500 4075 50  0001 C CNN
+F 1 "GND" H 1505 4152 50  0000 C CNN
+F 2 "" H 1500 4325 50  0001 C CNN
+F 3 "" H 1500 4325 50  0001 C CNN
+	1    1500 4325
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1750 4250 1750 4100
-Wire Wire Line
-	1750 4100 1650 4100
-Text Notes 1175 3850 0    50   ~ 0
+Text Notes 925  3975 0    50   ~ 0
 DIAG
-Text Notes 1225 3650 0    50   ~ 0
+Text Notes 975  3775 0    50   ~ 0
 EN
-Text Notes 1200 3750 0    50   ~ 0
+Text Notes 950  3875 0    50   ~ 0
 DIR
-Text Notes 1125 4050 0    50   ~ 0
+Text Notes 875  4175 0    50   ~ 0
 FREIN
-Text Notes 700  3950 0    50   ~ 0
+Text Notes 450  4075 0    50   ~ 0
 (VITESSE) TACHO
-Wire Wire Line
-	3250 4100 3250 4525
-Wire Wire Line
-	2925 3850 3500 3850
-Wire Wire Line
-	2925 3700 2925 3725
-Wire Wire Line
-	2925 3800 2925 3850
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5DB42EA6
@@ -913,9 +892,7 @@ F 3 "~" H 1900 5025 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 4500 1900 3700
-Wire Wire Line
-	1900 3700 2475 3700
+	1900 4500 1900 3725
 Wire Wire Line
 	1900 4800 1900 4875
 $Comp
@@ -932,12 +909,7 @@ $EndComp
 Wire Wire Line
 	1900 5175 1900 5275
 Wire Wire Line
-	2925 3725 3300 3725
-Wire Wire Line
-	2475 4875 2475 3700
-Connection ~ 2475 3700
-Wire Wire Line
-	2475 3700 2925 3700
+	2475 4875 2475 3725
 Wire Wire Line
 	2475 5175 2475 5275
 Text Notes 600  3325 0    100  ~ 0
@@ -1046,37 +1018,51 @@ Wire Wire Line
 Wire Wire Line
 	7950 1400 7650 1400
 Wire Wire Line
-	1900 3700 1900 3600
-Wire Wire Line
-	1900 3600 1650 3600
-Connection ~ 1900 3700
-Wire Wire Line
-	1650 3700 1800 3700
-Wire Wire Line
-	1800 3700 1800 3800
-Wire Wire Line
-	1800 3800 2925 3800
-Wire Wire Line
-	1650 3800 1725 3800
-Wire Wire Line
-	1725 3800 1725 3525
-Wire Wire Line
 	1725 3525 3850 3525
 Wire Wire Line
 	3850 3525 3850 3725
+Connection ~ 1900 3725
+Connection ~ 2475 3725
 Wire Wire Line
-	3375 4000 3375 4275
+	2475 3725 1900 3725
 Wire Wire Line
-	1650 4000 2975 4000
+	2475 3725 3300 3725
 Wire Wire Line
-	2975 3400 2975 4000
-Connection ~ 2975 4000
+	2750 2900 2750 3100
 Wire Wire Line
-	2975 4000 3375 4000
+	4450 4475 2750 4475
 Wire Wire Line
-	2150 4100 2150 3900
+	1800 4225 4025 4225
 Wire Wire Line
-	2150 3900 1650 3900
+	2750 3400 2750 4475
+Connection ~ 2750 4475
 Wire Wire Line
-	2150 4100 3250 4100
+	2750 4475 2150 4475
+Wire Wire Line
+	1400 3725 1900 3725
+Wire Wire Line
+	1400 3825 1800 3825
+Wire Wire Line
+	1800 3825 1800 4225
+Wire Wire Line
+	1400 3925 1725 3925
+Wire Wire Line
+	1725 3525 1725 3925
+Wire Wire Line
+	2150 4025 1400 4025
+Wire Wire Line
+	2150 4025 2150 4475
+Wire Wire Line
+	1400 4125 2975 4125
+Wire Wire Line
+	3375 4125 3375 4275
+Wire Wire Line
+	2975 3400 2975 4125
+Connection ~ 2975 4125
+Wire Wire Line
+	2975 4125 3375 4125
+Wire Wire Line
+	1500 4325 1500 4225
+Wire Wire Line
+	1500 4225 1400 4225
 $EndSCHEMATC
