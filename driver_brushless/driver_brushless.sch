@@ -192,7 +192,7 @@ U 1 1 5C27D8F4
 P 6500 4175
 F 0 "Rsense1" V 6425 4175 50  0000 C CNN
 F 1 "0.3" V 6500 4175 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6430 4175 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_Power_L20.0mm_W6.4mm_P22.40mm" V 6430 4175 50  0001 C CNN
 F 3 "~" H 6500 4175 50  0001 C CNN
 F 4 "https://fr.farnell.com/bourns/crl1206-jw-r300elf/res-couche-epaisse-0-3r-5-0-25w/dp/2328143?st=Résistance%200.3ohm%201206" H 1625 1700 50  0001 C CNN "RS-1"
 	1    6500 4175
@@ -1065,4 +1065,6 @@ Wire Wire Line
 	1500 4325 1500 4225
 Wire Wire Line
 	1500 4225 1400 4225
+Text Notes 4525 3300 0    50   ~ 0
+Vref = 0.775V
 $EndSCHEMATC
