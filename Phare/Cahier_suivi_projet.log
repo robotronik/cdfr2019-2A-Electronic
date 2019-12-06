@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.9.24)  5 DEC 2019 23:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.9.24)  6 DEC 2019 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,32 +557,43 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Pictures/Schema_phare.png Graphic file (type png)
 
 <use Pictures/Schema_phare.png>
-Package pdftex.def Info: Pictures/Schema_phare.png used on input line 101.
+Package pdftex.def Info: Pictures/Schema_phare.png used on input line 105.
 (pdftex.def)             Requested size: 298.61357pt x 364.65988pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3 <./Pictures/eclairage.png>] [4 <./Pictures/Schema_phare.png>]
+[3 <./Pictures/eclairage.png>]
+<Pictures/Schema_phare2.png, id=21, 465.74pt x 336.25626pt>
+File: Pictures/Schema_phare2.png Graphic file (type png)
+
+<use Pictures/Schema_phare2.png>
+Package pdftex.def Info: Pictures/Schema_phare2.png used on input line 119.
+(pdftex.def)             Requested size: 326.01578pt x 235.37776pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./Pictures/Schema_phare.png>] [5 <./Pictures/Schema_phare2.png>]
 (./Cahier_suivi_projet.aux) ) 
 Here is how much of TeX's memory you used:
- 2303 strings out of 494953
- 31464 string characters out of 6180977
+ 2307 strings out of 494953
+ 31596 string characters out of 6180977
  97124 words of memory out of 5000000
- 5566 multiletter control sequences out of 15000+600000
+ 5569 multiletter control sequences out of 15000+600000
  7895 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,7n,23p,298b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,23p,298b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Cahier_suivi_projet.pdf (4 pages, 182755 bytes).
+Output written on Cahier_suivi_projet.pdf (5 pages, 194847 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
