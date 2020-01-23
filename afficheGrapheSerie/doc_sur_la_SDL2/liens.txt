@@ -1,0 +1,2 @@
+https://zestedesavoir.com/tutoriels/1014/utiliser-la-sdl-en-langage-c/dessiner-dans-la-fenetre/
+https://alexandre-laurent.developpez.com/tutoriels/sdl-2/les-evenements/
