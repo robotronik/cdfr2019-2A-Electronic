@@ -76,7 +76,7 @@ void Error_Handler(void);
 //structure pour récupérer les 4 octets composants une variable de type float
 typedef union{
   float val;
-  struct octets{unsigned char A:8;unsigned char B:8;unsigned char C:8;unsigned char D:8};
+  struct {unsigned char A:8;unsigned char B:8;unsigned char C:8;unsigned char D:8;}octets;
 }flottant;
 /* USER CODE END Private defines */
 
