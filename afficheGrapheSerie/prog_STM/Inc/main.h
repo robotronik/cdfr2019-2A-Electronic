@@ -73,7 +73,11 @@ void Error_Handler(void);
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-
+//structure pour récupérer les 4 octets composants une variable de type float
+typedef union{
+  float val;
+  struct octets{unsigned char A:8;unsigned char B:8;unsigned char C:8;unsigned char D:8};
+}flottant;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
