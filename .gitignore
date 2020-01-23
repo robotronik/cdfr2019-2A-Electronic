@@ -27,3 +27,6 @@ _autosave-*
 # Rapport LateX
 *.aux
 *.log
+
+#fichiers objets
+.o
