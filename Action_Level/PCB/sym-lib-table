@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name Action_Card-rescue)(type Legacy)(uri ${KIPRJMOD}/Action_Card-rescue.lib)(options "")(descr ""))
 )

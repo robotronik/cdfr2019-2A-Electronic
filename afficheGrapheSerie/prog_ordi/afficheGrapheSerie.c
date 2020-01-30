@@ -104,7 +104,7 @@ int main (int argc, char* argv[])
     cal.couleurs[i-j].r = r; cal.couleurs[i-j].g = g; cal.couleurs[i-j].b = b; cal.couleurs[i-j].a = 255;
   }
   affiche_calibration(cal);
-  if(cal.nb_signaux>3){
+  if(cal.nb_signaux>4){
     printf("Un maximum de quatre signaux est supporté.\n");
     exit(EXIT_FAILURE);
   }
@@ -244,14 +244,14 @@ int init_port_serie(int* fd_tty_p){
   //retourne 0 en cas de succès, -1 sinon
   struct termios tty;
   //configuration du port série
-  *fd_tty_p = open("/dev/ttyACM0", O_RDONLY | O_NOCTTY);//, O_RDWR | O_NDELAY);//RDWR pour lecture et écriture, RDONLY pour lecture seule
+  *fd_tty_p = open("/dev/ttyACM1", O_RDONLY | O_NOCTTY);//, O_RDWR | O_NDELAY);//RDWR pour lecture et écriture, RDONLY pour lecture seule
   tcgetattr(*fd_tty_p, &tty);//récupère les paramètres de la liaison série
   cfsetispeed(&tty, DEBIT);
   cfsetospeed(&tty, DEBIT);
   //printf("Débit paramétré à 115200 baud.\n");
   tcsetattr(*fd_tty_p, TCSANOW, &tty);//écrit les paramètres de la liaison série
   if(*fd_tty_p <0){
-    printf("Impossible d'accéder au port série ttyACM0.\n");
+    printf("Impossible d'accéder au port série ttyACM1.\n");
     return -1;
   }
   return 0;

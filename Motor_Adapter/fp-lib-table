@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "Molex_FFC-FPC")(type "KiCad")(uri "${KIPRJMOD}/lib/Molex_FFC-FPC.pretty")(options "")(descr ""))
-)

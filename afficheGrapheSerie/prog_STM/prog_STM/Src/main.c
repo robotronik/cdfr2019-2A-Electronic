@@ -23,7 +23,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -69,7 +71,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
-  
+
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -94,10 +96,22 @@ int main(void)
 
   /* USER CODE END 2 */
 
+
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  float signaux[4];
+  int i=0;
   while (1)
   {
+    i++;
+    signaux[0] = sinf((float)i/20);
+    signaux[1] = cosf(signaux[0]);
+    signaux[2] = exp(signaux[0]);
+    signaux[3] = exp(signaux[1]);
+    transmetTrame(signaux, 4);
+    HAL_Delay(20);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -114,11 +128,11 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Configure the main internal regulator output voltage 
+  /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB busses clocks
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
@@ -133,7 +147,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB busses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -215,7 +229,24 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+int transmetFlottant(float val){
+  flottant valeur;
+  valeur.val = val;
+  char tampon[8];
+  sprintf(tampon, "%02x%02x%02x%02x", valeur.octets.A, valeur.octets.B, valeur.octets.C, valeur.octets.D);
+  HAL_UART_Transmit(&huart2, tampon, 8, 10);
+  return 0;
+}
 
+int transmetTrame(float* tab_val, int nb_val){
+  int i;
+  for(i=0;i<nb_val;i++){
+    transmetFlottant(tab_val[i]);
+  }
+  char tampon[2] = "\n";
+  HAL_UART_Transmit(&huart2, tampon, 1, 10);
+  return 0;
+}
 /* USER CODE END 4 */
 
 /**
@@ -239,7 +270,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */

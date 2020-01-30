@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name dsn2596)(type Legacy)(uri ${KIPRJMOD}/dsn2596.lib)(options "")(descr ""))
   (lib (name 2)(type Legacy)(uri ${KIPRJMOD}/2.lib)(options "")(descr ""))
+  (lib (name Power_Circuit-rescue)(type Legacy)(uri ${KIPRJMOD}/Power_Circuit-rescue.lib)(options "")(descr ""))
 )
