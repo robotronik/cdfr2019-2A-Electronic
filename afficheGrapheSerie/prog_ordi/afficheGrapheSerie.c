@@ -12,6 +12,7 @@
 #define FIN_TRAME 10 //le caractère de fin de trame
 
 #define DEBIT B921600
+#define CHEMIN_PORT_SERIE "/dev/ttyACM1" //généralement /dev/ttyACM0
 #define TAILLE_TAMPON 64//taille du tampon de réception des trames, le nombre maximum de flottant pouvant composer une trame
 
 //paramètres de l'affichage
@@ -244,14 +245,14 @@ int init_port_serie(int* fd_tty_p){
   //retourne 0 en cas de succès, -1 sinon
   struct termios tty;
   //configuration du port série
-  *fd_tty_p = open("/dev/ttyACM1", O_RDONLY | O_NOCTTY);//, O_RDWR | O_NDELAY);//RDWR pour lecture et écriture, RDONLY pour lecture seule
+  *fd_tty_p = open(CHEMIN_PORT_SERIE, O_RDONLY | O_NOCTTY);//, O_RDWR | O_NDELAY);//RDWR pour lecture et écriture, RDONLY pour lecture seule
   tcgetattr(*fd_tty_p, &tty);//récupère les paramètres de la liaison série
   cfsetispeed(&tty, DEBIT);
   cfsetospeed(&tty, DEBIT);
   //printf("Débit paramétré à 115200 baud.\n");
   tcsetattr(*fd_tty_p, TCSANOW, &tty);//écrit les paramètres de la liaison série
   if(*fd_tty_p <0){
-    printf("Impossible d'accéder au port série ttyACM1.\n");
+    printf("Impossible d'accéder au port série %s.\n", CHEMIN_PORT_SERIE);
     return -1;
   }
   return 0;
