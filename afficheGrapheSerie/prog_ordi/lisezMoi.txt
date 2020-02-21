@@ -1,1 +1,3 @@
-utilise la SDL 2.0
+Programme d'affichage sous forme graphique des données envoyées depuis une STM32 par liaison série (UART).
+
+Nécessite la SDL 2.0 pour l'affichage graphique ainsi que SDLttf pour l'affichage du texte dans la fenêtre.

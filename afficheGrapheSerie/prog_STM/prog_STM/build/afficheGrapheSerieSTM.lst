@@ -1,0 +1,221 @@
+ARM GAS  /tmp/ccRdvrvw.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"afficheGrapheSerieSTM.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.transmetFlottant,"ax",%progbits
+  18              		.align	1
+  19              		.global	transmetFlottant
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	transmetFlottant:
+  26              	.LFB133:
+  27              		.file 1 "Src/afficheGrapheSerieSTM.c"
+   1:Src/afficheGrapheSerieSTM.c **** #include "afficheGrapheSerieSTM.h"
+   2:Src/afficheGrapheSerieSTM.c **** #include "stm32f4xx_hal.h"
+   3:Src/afficheGrapheSerieSTM.c **** #include <stdio.h>
+   4:Src/afficheGrapheSerieSTM.c **** #include <stdlib.h>
+   5:Src/afficheGrapheSerieSTM.c **** 
+   6:Src/afficheGrapheSerieSTM.c **** UART_HandleTypeDef huart2;
+   7:Src/afficheGrapheSerieSTM.c **** 
+   8:Src/afficheGrapheSerieSTM.c **** int transmetFlottant(float val){
+  28              		.loc 1 8 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 85B0     		sub	sp, sp, #20
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 24
+   9:Src/afficheGrapheSerieSTM.c ****   flottant valeur;
+  10:Src/afficheGrapheSerieSTM.c ****   valeur.val = val;
+  11:Src/afficheGrapheSerieSTM.c ****   char tampon[8];
+  12:Src/afficheGrapheSerieSTM.c ****   sprintf(tampon, "%02x%02x%02x%02x", valeur.octets.A, valeur.octets.B, valeur.octets.C, valeur.oct
+  40              		.loc 1 12 0
+  41 0004 10EE102A 		vmov	r2, s0	@ int
+  42 0008 130E     		lsrs	r3, r2, #24
+  43 000a 0193     		str	r3, [sp, #4]
+  44 000c C2F30743 		ubfx	r3, r2, #16, #8
+  45 0010 0093     		str	r3, [sp]
+  46 0012 C2F30723 		ubfx	r3, r2, #8, #8
+ARM GAS  /tmp/ccRdvrvw.s 			page 2
+
+
+  47 0016 D2B2     		uxtb	r2, r2
+  48 0018 0749     		ldr	r1, .L3
+  49 001a 02A8     		add	r0, sp, #8
+  50 001c FFF7FEFF 		bl	sprintf
+  51              	.LVL1:
+  13:Src/afficheGrapheSerieSTM.c ****   HAL_UART_Transmit(&huart2, tampon, 8, 10);
+  52              		.loc 1 13 0
+  53 0020 0A23     		movs	r3, #10
+  54 0022 0822     		movs	r2, #8
+  55 0024 0DEB0201 		add	r1, sp, r2
+  56 0028 0448     		ldr	r0, .L3+4
+  57 002a FFF7FEFF 		bl	HAL_UART_Transmit
+  58              	.LVL2:
+  14:Src/afficheGrapheSerieSTM.c ****   return 0;
+  15:Src/afficheGrapheSerieSTM.c **** }
+  59              		.loc 1 15 0
+  60 002e 0020     		movs	r0, #0
+  61 0030 05B0     		add	sp, sp, #20
+  62              	.LCFI2:
+  63              		.cfi_def_cfa_offset 4
+  64              		@ sp needed
+  65 0032 5DF804FB 		ldr	pc, [sp], #4
+  66              	.L4:
+  67 0036 00BF     		.align	2
+  68              	.L3:
+  69 0038 00000000 		.word	.LC0
+  70 003c 00000000 		.word	huart2
+  71              		.cfi_endproc
+  72              	.LFE133:
+  74              		.section	.text.transmetTrame,"ax",%progbits
+  75              		.align	1
+  76              		.global	transmetTrame
+  77              		.syntax unified
+  78              		.thumb
+  79              		.thumb_func
+  80              		.fpu fpv4-sp-d16
+  82              	transmetTrame:
+  83              	.LFB134:
+  16:Src/afficheGrapheSerieSTM.c **** 
+  17:Src/afficheGrapheSerieSTM.c **** int transmetTrame(float* tab_val, int nb_val){
+  84              		.loc 1 17 0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 8
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              	.LVL3:
+  89 0000 70B5     		push	{r4, r5, r6, lr}
+  90              	.LCFI3:
+  91              		.cfi_def_cfa_offset 16
+  92              		.cfi_offset 4, -16
+  93              		.cfi_offset 5, -12
+  94              		.cfi_offset 6, -8
+  95              		.cfi_offset 14, -4
+  96 0002 82B0     		sub	sp, sp, #8
+  97              	.LCFI4:
+  98              		.cfi_def_cfa_offset 24
+  99 0004 0646     		mov	r6, r0
+ 100 0006 0D46     		mov	r5, r1
+ARM GAS  /tmp/ccRdvrvw.s 			page 3
+
+
+ 101              	.LVL4:
+  18:Src/afficheGrapheSerieSTM.c ****   int i;
+  19:Src/afficheGrapheSerieSTM.c ****   for(i=0;i<nb_val;i++){
+ 102              		.loc 1 19 0
+ 103 0008 0024     		movs	r4, #0
+ 104 000a 06E0     		b	.L6
+ 105              	.LVL5:
+ 106              	.L7:
+  20:Src/afficheGrapheSerieSTM.c ****     transmetFlottant(tab_val[i]);
+ 107              		.loc 1 20 0 discriminator 3
+ 108 000c 06EB8403 		add	r3, r6, r4, lsl #2
+ 109 0010 93ED000A 		vldr.32	s0, [r3]
+ 110 0014 FFF7FEFF 		bl	transmetFlottant
+ 111              	.LVL6:
+  19:Src/afficheGrapheSerieSTM.c ****     transmetFlottant(tab_val[i]);
+ 112              		.loc 1 19 0 discriminator 3
+ 113 0018 0134     		adds	r4, r4, #1
+ 114              	.LVL7:
+ 115              	.L6:
+  19:Src/afficheGrapheSerieSTM.c ****     transmetFlottant(tab_val[i]);
+ 116              		.loc 1 19 0 is_stmt 0 discriminator 1
+ 117 001a AC42     		cmp	r4, r5
+ 118 001c F6DB     		blt	.L7
+  21:Src/afficheGrapheSerieSTM.c ****   }
+  22:Src/afficheGrapheSerieSTM.c ****   char tampon[2] = "\n";
+ 119              		.loc 1 22 0 is_stmt 1
+ 120 001e 0A23     		movs	r3, #10
+ 121 0020 02A9     		add	r1, sp, #8
+ 122 0022 21F8043D 		strh	r3, [r1, #-4]!	@ movhi
+  23:Src/afficheGrapheSerieSTM.c ****   HAL_UART_Transmit(&huart2, tampon, 1, 10);
+ 123              		.loc 1 23 0
+ 124 0026 0122     		movs	r2, #1
+ 125 0028 0248     		ldr	r0, .L9
+ 126 002a FFF7FEFF 		bl	HAL_UART_Transmit
+ 127              	.LVL8:
+  24:Src/afficheGrapheSerieSTM.c ****   return 0;
+  25:Src/afficheGrapheSerieSTM.c **** }
+ 128              		.loc 1 25 0
+ 129 002e 0020     		movs	r0, #0
+ 130 0030 02B0     		add	sp, sp, #8
+ 131              	.LCFI5:
+ 132              		.cfi_def_cfa_offset 16
+ 133              		@ sp needed
+ 134 0032 70BD     		pop	{r4, r5, r6, pc}
+ 135              	.LVL9:
+ 136              	.L10:
+ 137              		.align	2
+ 138              	.L9:
+ 139 0034 00000000 		.word	huart2
+ 140              		.cfi_endproc
+ 141              	.LFE134:
+ 143              		.comm	huart2,64,4
+ 144              		.section	.rodata.transmetFlottant.str1.4,"aMS",%progbits,1
+ 145              		.align	2
+ 146              	.LC0:
+ 147 0000 25303278 		.ascii	"%02x%02x%02x%02x\000"
+ 147      25303278 
+ARM GAS  /tmp/ccRdvrvw.s 			page 4
+
+
+ 147      25303278 
+ 147      25303278 
+ 147      00
+ 148              		.text
+ 149              	.Letext0:
+ 150              		.file 2 "Inc/afficheGrapheSerieSTM.h"
+ 151              		.file 3 "/usr/include/newlib/machine/_default_types.h"
+ 152              		.file 4 "/usr/include/newlib/sys/_stdint.h"
+ 153              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
+ 154              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 155              		.file 7 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h"
+ 156              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 157              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 158              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 159              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 160              		.file 12 "/usr/include/newlib/sys/lock.h"
+ 161              		.file 13 "/usr/include/newlib/sys/_types.h"
+ 162              		.file 14 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
+ 163              		.file 15 "/usr/include/newlib/sys/reent.h"
+ 164              		.file 16 "/usr/include/newlib/stdlib.h"
+ 165              		.file 17 "/usr/include/newlib/stdio.h"
+ARM GAS  /tmp/ccRdvrvw.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 afficheGrapheSerieSTM.c
+     /tmp/ccRdvrvw.s:18     .text.transmetFlottant:0000000000000000 $t
+     /tmp/ccRdvrvw.s:25     .text.transmetFlottant:0000000000000000 transmetFlottant
+     /tmp/ccRdvrvw.s:69     .text.transmetFlottant:0000000000000038 $d
+                            *COM*:0000000000000040 huart2
+     /tmp/ccRdvrvw.s:75     .text.transmetTrame:0000000000000000 $t
+     /tmp/ccRdvrvw.s:82     .text.transmetTrame:0000000000000000 transmetTrame
+     /tmp/ccRdvrvw.s:139    .text.transmetTrame:0000000000000034 $d
+     /tmp/ccRdvrvw.s:145    .rodata.transmetFlottant.str1.4:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+sprintf
+HAL_UART_Transmit

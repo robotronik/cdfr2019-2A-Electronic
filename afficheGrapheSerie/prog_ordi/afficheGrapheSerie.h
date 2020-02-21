@@ -1,3 +1,6 @@
+#ifndef AFFICHEGRAPHESERIE
+#define AFFICHEGRAPHESERIE
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 
@@ -28,3 +31,5 @@ void affiche_calibration(calibration_echelle cal);
 void init_echelle_graphe(SDL_Renderer* rendu, calibration_echelle cal);
 int test_arret();
 int affiche_texte(SDL_Renderer* rendu, char* chaine, int pos_x, int pos_y, SDL_Color couleur, TTF_Font* police);
+
+#endif
