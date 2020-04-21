@@ -7,7 +7,9 @@
 //paramètre de la liaison série
 #define FIN_TRAME 10 //le caractère de fin de trame
 
-#define DEBIT B921600
+#define DEBIT B460800
+//débits testés : 921600 baud sur F4
+//                460800 baud sur F3 (pas réussi à configurer 921600 baud dans CubeMX)
 #define CHEMIN_PORT_SERIE "/dev/ttyACM1" //généralement /dev/ttyACM0
 #define TAILLE_TAMPON 128//taille du tampon de réception des trames, le nombre maximum de flottant pouvant composer une trame
 
